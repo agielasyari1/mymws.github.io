@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/images/a.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>agielasyari1-mws</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <a href="/index.html">
+                <img class="img-icon" src="images/homeicon.png">
+                <span>Home</span></a>
+        </div>
+        <div class="sidebar">
+            <div>
+                <img class="img-profil" width="200px" height="200px" src="images/profil.png">
+                <p class="title-page">
+                    Agielasyari <br> Mobile Web Specialist Google Developer Kejar <br> Batch 1 -2018
+                </p>
+            </div>
+        </div>
+        <div class="konten konten1">
+            <a href="/project1/index.html">
+                <img class="apps" src="images/calc.ico">
+                <span>Project 1 : Kalkulator</span>
+            </a>
+        </div>
+        <div class="konten konten4">
+            <a href="/project4/index.html">
+                <img class="apps" src="images/css-icon.png">
+                <span>Project 2 : Css</span>
+            </a>
+        </div>
+        <div class="konten konten2">
+            <a href="/project2/index.html">
+                <img class="apps" src="images/maps.png">
+                <span>Project 3 : Mapbox</span>
+            </a>
+        </div>
+        <div class="konten konten3">
+            <a href="/project3/index.html">
+                <img class="apps" src="images/maps-icon.png">
+                <span>Project 4 : Leaflet</span>
+            </a>
+        </div>
+        <div class="konten konten5">
+            <a href="/project5/index.html">
+                <img class="apps" src="images/calendar-icon.png">
+                <span>Project final</span>
+            </a>
+        </div>
+        <div class="footer">
+            <p>© 2018. <a href="https://www.instagram.com/agielasyari1/">agielasyari1</a></p>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAdiTDRMOM5P_N5MIGMewxtD2siT-Hl2LU",
+            authDomain: "agielasyari1-f9167.firebaseapp.com",
+            databaseURL: "https://agielasyari1-f9167.firebaseio.com",
+            projectId: "agielasyari1-f9167",
+            storageBucket: "agielasyari1-f9167.appspot.com",
+            messagingSenderId: "810631364495"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/serviceworker.js')
+                .then(function() {
+                    console.log('Service Worker Registered');
+                });
+        }
+    </script>
+</body>
+
+</html>

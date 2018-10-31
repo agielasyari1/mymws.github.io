@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        .warnaNav {
+            background-color: #ff4f4f;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="assets/css/bootstrap-social.css">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" href="../images/a.ico">
+    <title>agielasyari1-mws</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-inverse warnaNav link">
+            <div class="menu">
+                <a href="../index.html">
+                    <img class="img-icon" src="../images/homeicon.png">
+                </a>
+            </div>
+            <style>
+                .img-icon {
+                    width: 30px;
+                    height: 30px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    margin-right: 5px;
+                }
+            </style>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" style="color: white">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+              Resep
+            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a class="dropdown-item" href="ayam.html">Ayam</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="tempe.html">Tempe</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="daging.html">Daging</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="ikan.html">Ikan</a>
+
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kirim-resep.html" style="color: white">Kirim Resep</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html" style="color: white">Kontak</a>
+                    </li>
+
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success my-2 my-sm-0" style="background-color: orange" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <h1>Kontak Kami</h1>
+        <div id="map" style="width:100%;height:400px;background:yellow"></div>
+
+        <script>
+            //var mapboxgl = require('node_modules/mapbox-gl/dist/mapbox-gl.js');
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYWdpZWxhc3lhcmkxIiwiYSI6ImNqbm9mNmZpdTEzZmEza3F0NmZsYnRhdzMifQ.6XjSdELwLZZxCGapqqXcbw';
+            var map = new mapboxgl.Map({
+                container: 'mapid',
+                center: [112.791443, -7.246735],
+                zoom: 15,
+                style: 'mapbox://styles/mapbox/streets-v10'
+            });
+            map.addControl(new mapboxgl.NavigationControl());
+        </script>
+        <br>
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Kirim Pesan Kamu</h3>
+                <p>Kamu dapat menghubungi Kami melalui kontak yang tersedia </p>
+                <form ng-app="" name="myForm">
+                    <div class="form-group row">
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" placeholder="Nama Kamu">
+                            <br>
+                            <input type="email" name="myAddress" ng-model="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Kamu">
+                            <span ng-show="myForm.myAddress.$error.email">Masukan email yang benar lur</span>
+                            <br>
+                            <input type="text" class="form-control" placeholder="Subject">
+                            <br>
+                            <textarea class="form-control" placeholder="Isi" rows="4"></textarea>
+                            <br>
+                            <button type="submit" class="btn btn-secondary float-right" style="background-color: orange">Submit</button>
+
+                </form>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <h3>Hunting Alamat</h3>
+                <h6> Tambak Wedi gang merak, Kenjeran, Surabaya, Jawa Timur, indonesia. </h6>
+                <h3>Whatsapp</h3>
+                <a class="btn btn-success" href="https://api.whatsapp.com/send?phone=6289643408570">0896 4340 8570</a>
+            </div>
+        </div>
+
+
+
+
+        <!-- footer -->
+        <div class="container">
+            <div class="row mb-3 text-center" style="background-color: #ff4f4f;color: white">
+                <div class="col-md-4">
+                    <h4>Location </h4>
+                    <hr style="background-color: white">
+                    <ul class="column list-unstyled">
+                        <li> <a style="color: white">Surabaya, Jawa Timur, Indonesia</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Widget</h4>
+                    <hr style="background-color: white">
+                    <ul class="column list-unstyled">
+                        <li> <a style="color: white" href="Tos.html">Term Of Service</a></li>
+                        <li> <a style="color: white" href="Privacy-policy.html">Privacy Policy</a></li>
+                        <li> <a style="color: white" href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>author</h4>
+                    <hr style="background-color: white">
+                    <ul class="column list-unstyled">
+                        <li> <a style="color: white" href="https://www.instagram.com/agielasyari1/">Agielasyari1</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
